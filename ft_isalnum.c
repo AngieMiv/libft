@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
 
 int	ft_isalnum(unsigned char c)
 {

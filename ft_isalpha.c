@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
 
 int	ft_isalpha(unsigned char c)
 {
@@ -18,3 +19,11 @@ int	ft_isalpha(unsigned char c)
 		return (1);
 	return (0);
 }
+
+/*
+int	main(void)
+{
+	printf("\tft_isalpha \n%d es una letra = 1, %d no es una letra = 0", ft_isalpha('a'), ft_isalpha('1'));
+	printf("\n\tisalpha \n%d es una letra = 1, %d no es una letra = 0", isalpha('a'), isalpha('1'));
+}
+*/
