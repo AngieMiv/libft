@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 12:05:09 by anibarro          #+#    #+#             */
-/*   Updated: 2023/09/14 12:34:33 by anibarro         ###   ########.fr       */
+/*   Created: 2023/09/19 15:19:55 by anibarro          #+#    #+#             */
+/*   Updated: 2023/09/19 16:09:44 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isalnum(int c)
+int	ft_isprint(int c)
 {
-	if ((ft_isalpha(c) == 1 || ft_isdigit(c) == 1))
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
@@ -24,7 +22,9 @@ int	ft_isalnum(int c)
 /*
 int	main(void)
 {
-	printf("\tft_isalnum \n%d = 1, %d es = 0", ft_isalnum('a'), ft_isalnum('?'));
-	printf("\n\tisalnum \n%d = 1, %d es = 0", isalnum('a'), isalnum('?'));
+	printf("ft_isprint %d = 0, %d = 1",
+		ft_isprint(31), ft_isprint(126));
+	printf("\nisprint %d = 0, %d = 1",
+		isprint(31), isprint(126));
 }
 */

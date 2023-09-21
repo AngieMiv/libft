@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 12:05:09 by anibarro          #+#    #+#             */
-/*   Updated: 2023/09/14 12:34:33 by anibarro         ###   ########.fr       */
+/*   Created: 2023/09/19 16:30:28 by anibarro          #+#    #+#             */
+/*   Updated: 2023/09/19 16:38:04 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isalnum(int c)
+size_t	ft_strlen(const char *string)
 {
-	if ((ft_isalpha(c) == 1 || ft_isdigit(c) == 1))
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (string[i] != '\0')
+		i++;
+	return (i);
 }
 
 /*
-int	main(void)
-{
-	printf("\tft_isalnum \n%d = 1, %d es = 0", ft_isalnum('a'), ft_isalnum('?'));
-	printf("\n\tisalnum \n%d = 1, %d es = 0", isalnum('a'), isalnum('?'));
+int	main(){
+	printf("%zu", ft_strlen("sus odio"));
 }
 */

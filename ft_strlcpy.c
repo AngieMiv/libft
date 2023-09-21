@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 12:05:09 by anibarro          #+#    #+#             */
-/*   Updated: 2023/09/14 12:34:33 by anibarro         ###   ########.fr       */
+/*   Created: 2023/09/19 17:14:52 by anibarro          #+#    #+#             */
+/*   Updated: 2023/09/19 19:45:17 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
 
-int	ft_isalnum(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if ((ft_isalpha(c) == 1 || ft_isdigit(c) == 1))
-		return (1);
-	return (0);
-}
+	size_t	i;
+	size_t	srclen;
 
+	srclen = ft_strlen(src);
+	i = 0;
+	if (dstsize != 0)
+	{
+		while (src[i] != '\0' && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (srclen);
+}
 /*
 int	main(void)
 {
-	printf("\tft_isalnum \n%d = 1, %d es = 0", ft_isalnum('a'), ft_isalnum('?'));
-	printf("\n\tisalnum \n%d = 1, %d es = 0", isalnum('a'), isalnum('?'));
+	char d[] = "Angie";
+	const char	s[] = "hola";
+
+	printf("%zu", ft_strlcpy(d, s, 5));
 }
 */

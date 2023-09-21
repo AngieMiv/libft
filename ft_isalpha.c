@@ -11,9 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
 
-int	ft_isalpha(unsigned char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
@@ -23,7 +22,9 @@ int	ft_isalpha(unsigned char c)
 /*
 int	main(void)
 {
-	printf("\tft_isalpha \n%d es una letra = 1, %d no es una letra = 0", ft_isalpha('a'), ft_isalpha('1'));
-	printf("\n\tisalpha \n%d es una letra = 1, %d no es una letra = 0", isalpha('a'), isalpha('1'));
+	printf("\tft_isalpha \n%d es una letra = 1, %d no es una letra = 0",
+	 ft_isalpha('a'), ft_isalpha('1'));
+	printf("\n\tisalpha \n%d es una letra = 1, %d no es una letra = 0",
+	 isalpha('a'), isalpha('1'));
 }
 */
