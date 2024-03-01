@@ -6,7 +6,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCs =	ft_isalnum.c \
+SRCs =		ft_isalnum.c \
 		ft_isalpha.c \
  		ft_isdigit.c \
 		ft_isascii.c \
@@ -28,7 +28,7 @@ $.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	$(RM) $(NAME)
+	$(RM) $(OBJs)
 
 fclean: clean
 	$(RM) $(NAME)

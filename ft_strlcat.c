@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -23,9 +24,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	srclen = ft_strlen(src);
 	i = 0;
 	j = dstlen;
-	if (dstsize != 0 && (dstlen + srclen) < dstsize)
+	if (dstsize != 0 && (srclen != 0) && (dstlen + srclen) <= dstsize)
 	{
-		while (src[i] != '\0')
+		while (src[i] != '\0' && dstsize <= (dstlen + srclen))
 		{
 			dst[j] = src[i];
 			i++;
@@ -33,14 +34,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		}
 		dst[j] = '\0';
 	}
-	return (dstlen + srclen);
+	return (srclen + j);
 }
 /*
 int	main(void)
 {
-	char dst[] = "hola ";
-	const char src[] = "que tal";
-
-	printf("%lu", ft_strlcat(dst, src, 6));
-	printf("\n%lu", strlcat(dst, src, 6)); 	
-}*/
+	printf("%lu", ft_strlcat("pqrstuvwxyz", "abcd", 1));
+	printf("\n%lu", strlcat("pqrstuvwxyz", "abcd", 1));
+}
+*/
