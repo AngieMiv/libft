@@ -6,15 +6,15 @@
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 16:41:41 by anibarro          #+#    #+#             */
-/*   Updated: 2023/09/21 14:43:09 by anibarro         ###   ########.fr       */
+/*   Updated: 2024/03/01 17:56:06 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include "libft.h"
+
+include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
 
 }
 
-*/
+
