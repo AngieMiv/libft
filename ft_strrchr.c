@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 20:33:05 by anibarro          #+#    #+#             */
-/*   Updated: 2024/05/21 17:35:24 by anibarro         ###   ########.fr       */
+/*   Updated: 2024/05/22 18:40:21 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int				i;
 	unsigned char	c1;
 
 	c1 = c;
-	i = 0;
-	while (s[i] != c1 && s[i] != '\0')
-		i++;
-	if (s[i] == c1)
-		return ((char *)s + i);
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == c1)
+			return ((char *)s + i);
+		i--;
+	}
 	return (NULL);
 }
-// para buscar la 1a aparicion de un carácter especifico
+// para buscar la 1a aparicion de un carácter especifico Reverse
 /*
 int	main(void)
 {
-	char s[] = "caracter especifico";
-	printf("%s", strchr(s, 105));
-	//printf("%s", ft_strchr(s, 105));
+	char s[30] = "caracter especifico";
+	//printf("%s", strrchr(s, 105));
+	printf("%s", ft_strrchr(s, 105));
 
 }
 */
