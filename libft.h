@@ -6,7 +6,7 @@
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 10:35:36 by anibarro          #+#    #+#             */
-/*   Updated: 2024/05/24 17:59:21 by anibarro         ###   ########.fr       */
+/*   Updated: 2024/05/24 18:59:20 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+// void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 #endif
