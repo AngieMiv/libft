@@ -20,6 +20,7 @@ SRCs =		ft_isalnum.c \
 		ft_strrchr.c \
 		ft_strncmp.c \
 		ft_atoi.c \
+		ft_bzero.c \
 
 OBJs = $(SRCs:.c=.o)
 
