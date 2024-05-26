@@ -23,6 +23,8 @@ SRCs =		ft_isalnum.c \
 		ft_bzero.c \
 		ft_memset.c \
 		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memcmp.c \
 
 OBJs = $(SRCs:.c=.o)
 
