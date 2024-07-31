@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <ctype.h>
-#include <stdio.h>
 
 int	ft_isalnum(int c)
 {
@@ -27,4 +25,5 @@ int	main(void)
 	printf("\tft_isalnum \n%d = 1, %d es = 0", ft_isalnum('a'), ft_isalnum('?'));
 	printf("\n\tisalnum \n%d = 1, %d es = 0", isalnum('a'), isalnum('?'));
 }
+//devuelve 0 si el caracter es false, y un non-zero si es true
 */

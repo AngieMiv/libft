@@ -30,12 +30,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (srclen);
 }
-/*
+
 int	main(void)
 {
 	char d[] = "Angie";
 	const char	s[] = "hola";
 
-	printf("%zu", ft_strlcpy(d, s, 5));
+	printf("ft_ = %zu\n", ft_strlcpy(d, s, 5));
+	printf("og = %zu", strlcpy(d, s, 5));
 }
-*/
+
