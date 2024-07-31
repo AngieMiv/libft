@@ -6,7 +6,7 @@
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:23:27 by anibarro          #+#    #+#             */
-/*   Updated: 2023/09/21 14:42:30 by anibarro         ###   ########.fr       */
+/*   Updated: 2024/05/19 20:26:22 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,33 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
 	size_t	dstlen;
 	size_t	srclen;
+	size_t	max_chars_to_append;
 
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
+	max_chars_to_append = dstsize - dstlen - 1;
 	i = 0;
-	j = dstlen;
-	if (dstsize != 0 && (srclen != 0) && (dstlen + srclen) <= dstsize)
+	if (dstsize == 0 || dstsize <= dstlen)
+		return (srclen + dstsize);
+	while (src[i] && i < max_chars_to_append)
 	{
-		while (src[i] != '\0' && dstsize <= (dstlen + srclen))
-		{
-			dst[j] = src[i];
-			i++;
-			j++;
-		}
-		dst[j] = '\0';
+		dst[dstlen + i] = src[i];
+		i++;
 	}
-	return (srclen + j);
+	dst[dstlen + i] = '\0';
+	return (srclen + dstlen);
 }
 /*
 int	main(void)
 {
-	printf("%lu", ft_strlcat("pqrstuvwxyz", "abcd", 1));
-	printf("\n%lu", strlcat("pqrstuvwxyz", "abcd", 1));
+	char	dst[20] = "foo";
+	char	src[] = "bar";
+	printf("\nbefore %s", dst);
+	printf("\n%lu ft_strlcat", ft_strlcat(dst, src, 10));
+	//printf("\n%lu = strlcat ", strlcat(dst, src, 10));
+	printf("\n%s = strlcat after", dst);
+	printf("\nft_strlcat after %lu\n", ft_strlcat(dst, src, 10));
 }
 */

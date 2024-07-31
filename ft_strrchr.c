@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   prueba.c                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anibarro <anibarro@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 17:00:48 by anibarro          #+#    #+#             */
-/*   Updated: 2023/12/06 18:21:53 by anibarro         ###   ########.fr       */
+/*   Created: 2024/05/19 20:33:05 by anibarro          #+#    #+#             */
+/*   Updated: 2024/05/22 18:40:21 by anibarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
+char	*ft_strrchr(const char *s, int c)
+{
+	int				i;
+	unsigned char	c1;
+
+	c1 = c;
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == c1)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
+}
+// para buscar la 1a aparicion de un carácter especifico Reverse
+/*
 int	main(void)
 {
-	char		destino[];
-	const char	source[];
-	size_t		numero;
+	char s[30] = "caracter especifico";
+	//printf("%s", strrchr(s, 105));
+	printf("%s", ft_strrchr(s, 105));
 
-	destino = "pqrstuvwxyz";
-	source = "abcd";
-	numero = strlcat(destino, source, 1);
-	strlcat(destino, source, 1);
-	printf("%lu\n", numero);
-	printf("%s", destino);
 }
+*/
